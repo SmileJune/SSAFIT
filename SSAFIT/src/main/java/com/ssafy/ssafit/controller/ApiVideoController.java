@@ -12,7 +12,7 @@ import com.ssafy.ssafit.dao.VideoDao;
 import com.ssafy.ssafit.dto.Video;
 
 @RestController
-@RequestMapping("/api")
+@RequestMapping("/api/video")
 public class ApiVideoController {
 	
 	@Autowired
@@ -30,6 +30,6 @@ public class ApiVideoController {
 	
 	@GetMapping("/favorite")
 	public List<Video> favorite(){
-		return videoDao.selectAllbyViews();
+		return videoDao.selectAllByViews();
 	}
 }
